@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolleyZone | Vôlei em Destaque</title>
+    <!-- Carregamento do Tailwind CSS para estilização moderna e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de fonte global e cores de base */
+        :root {
+            --primary-color: #F8F9FA; /* Light Gray/White */
+            --secondary-color: #3B82F6; /* Blue for highlights */
+            --dark-color: #1F2937; /* Dark Gray for background */
+            --text-light: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-color);
+            color: var(--text-light);
+            min-height: 100vh;
+        }
+
+        /* Estilo para garantir que o contêiner de prévia mantenha a proporção 16:9 */
+        .preview-responsive {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+
+        /* Estilo para a imagem de fundo dentro do container responsive */
+        .preview-responsive img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-gray-900 shadow-xl p-4 text-center text-4xl font-bold tracking-widest uppercase text-blue-400">
+        VOLLEYZONE
+    </header>
+
+    <!-- Seção de Chamada (Destaque Principal) -->
+    <section class="chamada p-6 md:p-12 lg:flex lg:items-center lg:space-x-12 bg-gray-800 m-4 rounded-xl shadow-2xl">
+        
+        <!-- Texto de Chamada -->
+        <div class="chamada-texto lg:w-1/3 mb-6 lg:mb-0">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white">
+                TOP SAQUES E ATAQUES
+            </h1>
+            <p class="text-xl font-semibold text-blue-400 mb-6">#potência #rallyépico #recordes</p>
+            <p class="text-gray-300">
+                Os links antigos foram substituídos por destaques mais recentes e ativos das Olimpíadas e VNL 2024. 
+                Clique na prévia abaixo para assistir a uma compilação de saques e ataques mais rápidos. Pura adrenalina!
+            </p>
+        </div>
+
+        <!-- Vídeo Preview (Destaque) - Link Ativo -->
+        <div class="lg:w-2/3">
+            <!-- LINK DO VÍDEO PRINCIPAL: TOP 20 Saques mais fortes (Atualizado com link 120+ km/h) -->
+            <a href="https://www.youtube.com/watch?v=QTdhf2dunwE" target="_blank" class="block relative mb-4 rounded-xl overflow-hidden shadow-2xl group cursor-pointer preview-responsive">
+                <!-- Imagem Placeholder que simula um thumbnail de vídeo, com cor de destaque -->
+                <img 
+                    src="https://placehold.co/1280x720/4f46e5/ffffff?text=TOP+20+SAQUES+MAIS+FORTES%0A%0ACLICK+PARA+ASSISTIR" 
+                    alt="Destaque: Top 20 Saques Mais Fortes Preview" 
+                    class="transition duration-300 group-hover:opacity-80"
+                />
+                <!-- Overlay com Ícone de Play -->
+                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300">
+                     <!-- Ícone de Play grande (SVG inline para garantia de carregamento) -->
+                    <svg class="w-20 h-20 text-white opacity-80 group-hover:opacity-100 transition duration-300 transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L12 15.41l-3.54-3.53zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                </div>
+            </a>
+            
+            <!-- Botão de fallback redundante -->
+            <a href="https://www.youtube.com/watch?v=QTdhf2dunwE" target="_blank" class="block w-full text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300 text-lg shadow-md">
+                ASSISTIR COMPILAÇÃO NO YOUTUBE
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção de Categorias (Lista de Vídeos em formato de Cartão) -->
+    <section class="categoria p-6 md:p-12">
+        <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-500 pb-2 inline-block">Jogos Históricos e Destaques (ATUALIZADOS)</h2>
+        
+        <div class="categoria-videos grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            
+            <!-- Item 1: Final Olímpica (SUBSTITUÍDO) -->
+            <div class="rounded-lg overflow-hidden shadow-xl bg-gray-900 border border-gray-700 hover:scale-105 transition duration-300">
+                <!-- NOVO LINK: Ouro Vôlei Masculino Rio 2016 (Cazé TV) -->
+                <a href="https://www.youtube.com/watch?v=Bqk2QUQOGvY" target="_blank" class="block">
+                    <!-- Thumbnail com fallback -->
+                    <img src="https://img.youtube.com/vi/Bqk2QUQOGvY/maxresdefault.jpg" alt="TBT: Ouro Vôlei Masculino Rio 2016" class="w-full h-auto object-cover border-b border-gray-700" onerror="this.onerror=null;this.src='https://placehold.co/600x338/3B82F6/ffffff?text=FINAL+OLÍMPICA+2016';" />
+                </a>
+                <div class="p-3">
+                    <h3 class="text-white text-lg font-semibold mb-2">Final Rio 2016 (Masc. - TBT)</h3>
+                    <a href="https://www.youtube.com/watch?v=Bqk2QUQOGvY" target="_blank" class="block w-full text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 text-sm">
+                        Assistir no YouTube
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 2: Melhores Bloqueios (SUBSTITUÍDO) -->
+            <div class="rounded-lg overflow-hidden shadow-xl bg-gray-900 border border-gray-700 hover:scale-105 transition duration-300">
+                <!-- NOVO LINK: 10 Bloqueios 90 Graus Monstruosos (Feminino) -->
+                <a href="https://www.youtube.com/watch?v=K-J3S99z9DI" target="_blank" class="block">
+                    <!-- Thumbnail com fallback -->
+                    <img src="https://img.youtube.com/vi/K-J3S99z9DI/maxresdefault.jpg" alt="10 Bloqueios Monstruosos" class="w-full h-auto object-cover border-b border-gray-700" onerror="this.onerror=null;this.src='https://placehold.co/600x338/10B981/ffffff?text=BLOQUEIOS+MONSTRUOSOS';" />
+                </a>
+                <div class="p-3">
+                    <h3 class="text-white text-lg font-semibold mb-2">10 Bloqueios Monstruosos</h3>
+                    <a href="https://www.youtube.com/watch?v=K-J3S99z9DI" target="_blank" class="block w-full text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 text-sm">
+                        Assistir no YouTube
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 3: Ataques Mais Fortes (ATUALIZADO com link 120+ km/h) -->
+            <div class="rounded-lg overflow-hidden shadow-xl bg-gray-900 border border-gray-700 hover:scale-105 transition duration-300">
+                <!-- LINK ATUALIZADO: TOP 20 Saques Mais Fortes (120+ km/h) -->
+                <a href="https://www.youtube.com/watch?v=QTdhf2dunwE" target="_blank" class="block">
+                    <!-- Thumbnail com fallback -->
+                    <img src="https://img.youtube.com/vi/QTdhf2dunwE/maxresdefault.jpg" alt="TOP 20 Saques e Ataques" class="w-full h-auto object-cover border-b border-gray-700" onerror="this.onerror=null;this.src='https://placehold.co/600x338/F59E0B/ffffff?text=TOP+20+ATAQUES';" />
+                </a>
+                <div class="p-3">
+                    <h3 class="text-white text-lg font-semibold mb-2">TOP 20 Saques Mais Fortes</h3>
+                    <a href="https://www.youtube.com/watch?v=QTdhf2dunwE" target="_blank" class="block w-full text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 text-sm">
+                        Assistir no YouTube
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 4: Destaques da Seleção Feminina (SUBSTITUÍDO) -->
+            <div class="rounded-lg overflow-hidden shadow-xl bg-gray-900 border border-gray-700 hover:scale-105 transition duration-300">
+                <!-- NOVO LINK: Melhores Momentos Brasil 3x0 Turquia VNL 2024 -->
+                <a href="https://www.youtube.com/watch?v=0Fm9zKB0URg" target="_blank" class="block">
+                    <!-- Thumbnail com fallback -->
+                    <img src="https://img.youtube.com/vi/0Fm9zKB0URg/maxresdefault.jpg" alt="Brasil 3x0 Turquia VNL 2024" class="w-full h-auto object-cover border-b border-gray-700" onerror="this.onerror=null;this.src='https://placehold.co/600x338/EC4899/ffffff?text=BRASIL+X+TURQUIA+VNL';" />
+                </a>
+                <div class="p-3">
+                    <h3 class="text-white text-lg font-semibold mb-2">Brasil x Turquia VNL 2024</h3>
+                    <a href="https://www.youtube.com/watch?v=0Fm9zKB0URg" target="_blank" class="block w-full text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 text-sm">
+                        Assistir no YouTube
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Item 5: Vôlei de Praia (SUBSTITUÍDO) -->
+            <div class="rounded-lg overflow-hidden shadow-xl bg-gray-900 border border-gray-700 hover:scale-105 transition duration-300">
+                <!-- NOVO LINK: Vôlei de Praia Feminino - Brasil x Letônia Paris 2024 -->
+                <a href="https://www.youtube.com/watch?v=Plvce7Gr3tA" target="_blank" class="block">
+                    <!-- Thumbnail com fallback -->
+                    <img src="https://img.youtube.com/vi/Plvce7Gr3tA/maxresdefault.jpg" alt="Vôlei de Praia Feminino Paris 2024" class="w-full h-auto object-cover border-b border-gray-700" onerror="this.onerror=null;this.src='https://placehold.co/600x338/F97316/ffffff?text=VÔLEI+DE+PRAIA+2024';" />
+                </a>
+                <div class="p-3">
+                    <h3 class="text-white text-lg font-semibold mb-2">Vôlei de Praia Paris 2024 (F)</h3>
+                    <a href="https://www.youtube.com/watch?v=Plvce7Gr3tA" target="_blank" class="block w-full text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 text-sm">
+                        Assistir no YouTube
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer simples para fechar a página -->
+    <footer class="text-center p-4 mt-8 text-sm text-gray-500">
+        &copy; 2024 VolleyZone. Todos os direitos reservados.
+    </footer>
+
+</body>
+
+</html>
